@@ -52,7 +52,7 @@ Open your Firefox browser and navigate to:
 ```bash
 http://localhost:1337
 ```
-You should see your production application running behind Nginx.
+Or a port of your choosing. You should see your production application running behind Nginx.
 
 ## Database Setup 
 Before using the application, initialize and seed the PostgreSQL database.
