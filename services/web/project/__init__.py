@@ -1,14 +1,10 @@
 from flask import Flask, jsonify
 from flask_sqlalchemy import SQLAlchemy
 
+
 app = Flask(__name__)
 app.config.from_object("project.config.Config")
-
-# Initialize SQLAlchemy without passing the app
-db = SQLAlchemy()
-
-# Initialize the db with the app
-db.init_app(app)
+db = SQLAlchemy(app)
 
 
 class User(db.Model):
