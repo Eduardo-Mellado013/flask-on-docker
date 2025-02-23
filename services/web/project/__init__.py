@@ -10,6 +10,7 @@ db = SQLAlchemy()
 # Initialize the db with the app
 db.init_app(app)
 
+
 class User(db.Model):
     __tablename__ = "users"
 
@@ -20,8 +21,7 @@ class User(db.Model):
     def __init__(self, email):
         self.email = email
 
+
 @app.route("/")
 def hello_world():
     return jsonify(hello="world")
-
-
