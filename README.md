@@ -44,7 +44,7 @@ Build and run the production services (which use Gunicorn and Nginx) with the fo
 ```
 docker compose -f docker-compose.prod.yml up -d --build
 ```
-Gunicorn serves your Flask application on port 5000 inside the container, and Nginx acts as a reverse proxy, mapping the external port (e.g., 1337) to the internal port.
+Gunicorn serves your Flask application on port 5000 inside the container, and Nginx acts as a reverse proxy, mapping the external port (e.g., 1342) to the internal port.
 
 ### Access the Production Application
 Open your Firefox browser and navigate to:
