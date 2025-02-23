@@ -31,7 +31,7 @@ Open Firefox and navigate to `http://localhost:5000` or any other port of your c
 ## Production 
 For production, the configuration uses Gunicorn as a WSGI server and Nginx as a reverse proxy to efficiently serve your application.
 
-### Stop Exisitng Containers and Remove Volumes
+### Stop Existing Containers and Remove Volumes
 Before starting the production environment, remove any existing containers and volumes:
 
 ```
@@ -69,4 +69,18 @@ Populate the database with initial data:
 
 ```bash
 docker compose exec web python manage.py seed_db
+```
+
+## Viewing Media
+
+Now using image located in this repository. Access the following port or a port of your choosing on your Firefox browser
+.
+```bash
+http://localhost:1337/upload.
+```
+
+Select the `browse` option on this link and select the image. Now the image should be viewable at 
+
+```bash
+http://localhost:1337/media/IMAGE_FILE_NAME
 ```
