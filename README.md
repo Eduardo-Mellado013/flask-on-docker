@@ -10,7 +10,7 @@ This repository demonstrates how to containerize a Flask application using Docke
 - Ensure [Docker](https://www.docker.com/get-started) and [Docker Compose](https://docs.docker.com/compose/install/) are installed.
 - Clone this repository:
   ```bash
-  git clone https://github.com/your-username/flask-on-docker.git
+  git clone https://github.com/Eduardo-Mellado013/flask-on-docker
   cd flask-on-docker
   ```
 
