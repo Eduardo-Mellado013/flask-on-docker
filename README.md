@@ -26,7 +26,7 @@ docker compose up
 This command starts the Flask development server, PostgreSQL, and any other services defined in `docker-compose.yml`
 
 ### Access the Application 
-Open Firefox and navigate to `http://localhost:5028` or any other port of your choosing. The Flask development server should now be running and accessible.
+Open Firefox and navigate to `http://localhost:5028` or any other port of your choosing. This is a reminder to enable port forwarding if needed. The Flask development server should now be running and accessible. There should be a `hello world` sanity check.
 
 ## Production 
 For production, the configuration uses Gunicorn as a WSGI server and Nginx as a reverse proxy to efficiently serve your application.
@@ -50,9 +50,9 @@ Gunicorn serves your Flask application on port 5000 inside the container, and Ng
 Open your Firefox browser and navigate to:
 
 ```bash
-http://localhost:1324
+http://localhost:1342
 ```
-Or a port of your choosing. You should see your production application running behind Nginx.
+Or a port of your choosing. You should see your production application running behind Nginx.There should be a `hello world` sanity check.
 
 ## Database Setup 
 Before using the application, initialize and seed the PostgreSQL database.
@@ -76,11 +76,11 @@ docker compose exec web python manage.py seed_db
 Now using `CMC.jpg` image located in this repository. Access the following port or a port of your choosing on your Firefox browser
 .
 ```bash
-http://localhost:1324/upload
+http://localhost:1342/upload
 ```
 
 Select the `browse` option on this link and select the `CMC.jpg` image. Now the image should be viewable at 
 
 ```bash
-http://localhost:1324/media/CMC.jpg
+http://localhost:1342/media/CMC.jpg
 ```
