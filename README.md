@@ -1,0 +1,72 @@
+# Flask on Docker
+
+## Overview
+This repository demonstrates how to containerize a Flask application using Docker, PostgreSQL, Gunicorn, and Nginx. Inspired by the guide from [TestDriven.io](https://testdriven.io/blog/dockerizing-flask-with-postgres-gunicorn-and-nginx/), this project includes separate configurations for development and production environments. In development, the Flask built-in server is used, while in production, Gunicorn and Nginx provide a robust and scalable setup.
+
+## Build Instructions
+
+### Prerequisites
+
+- Ensure [Docker](https://www.docker.com/get-started) and [Docker Compose](https://docs.docker.com/compose/install/) are installed.
+- Clone this repository:
+  ```bash
+  git clone https://github.com/your-username/flask-on-docker.git
+  cd flask-on-docker
+  ```
+
+## Development 
+
+### Start the Development Environment 
+Use Docker Compose to start the development services:
+
+```bash
+docker compose up
+```
+
+This command starts the Flask development server, PostgreSQL, and any other services defined in `docker-compose.yml`
+
+### Access the Application 
+Open Firefox and navigate to `http://localhost:5000` or any other port of your choosing. The Flask development server should now be running and accessible.
+
+## Production 
+For production, the configuration uses Gunicorn as a WSGI server and Nginx as a reverse proxy to efficiently serve your application.
+
+### Stop Exisitng Containers and Remove Volumes
+Before starting the production environment, remove any existing containers and volumes:
+
+```
+docker compose -f docker-compose.prod.yml down -v
+```
+
+### Build and Start the Production Containers
+Build and run the production services (which use Gunicorn and Nginx) with the following command:
+
+```
+docker compose -f docker-compose.prod.yml up -d --build
+```
+Gunicorn serves your Flask application on port 5000 inside the container, and Nginx acts as a reverse proxy, mapping the external port (e.g., 1337) to the internal port.
+
+### Access the Production Application
+Open your Firefox browser and navigate to:
+
+```bash
+http://localhost:1337
+```
+You should see your production application running behind Nginx.
+
+## Database Setup 
+Before using the application, initialize and seed the PostgreSQL database.
+
+### Create Database Schema
+Run the following command to create the necessary database tables
+
+```bash
+docker compose exec web python manage.py create_db
+```
+
+### Seed the Database 
+Populate the database with initial data:
+
+```bash
+docker compose exec web python manage.py seed_db
+```
