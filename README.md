@@ -76,7 +76,7 @@ docker compose exec web python manage.py seed_db
 Now using image located in this repository. Access the following port or a port of your choosing on your Firefox browser
 .
 ```bash
-http://localhost:1337/upload.
+http://localhost:1337/upload
 ```
 
 Select the `browse` option on this link and select the image. Now the image should be viewable at 
