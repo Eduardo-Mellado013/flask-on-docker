@@ -26,7 +26,7 @@ docker compose up
 This command starts the Flask development server, PostgreSQL, and any other services defined in `docker-compose.yml`
 
 ### Access the Application 
-Open Firefox and navigate to `http://localhost:5028` or any other port of your choosing. This is a reminder to enable port forwarding if needed. The Flask development server should now be running and accessible. There should be a `hello world` sanity check.
+Open Firefox and navigate to `http://localhost:5028` or any other port of your choosing. This is a reminder to enable port forwarding if needed. The Flask development server should now be running and accessible.  There should be a `hello world` sanity check.
 
 ## Production 
 For production, the configuration uses Gunicorn as a WSGI server and Nginx as a reverse proxy to efficiently serve your application.
