@@ -84,6 +84,6 @@ Select the `browse` option on this link and select the `CMC.jpg` image. Now the 
 ```bash
 http://localhost:1342/media/CMC.jpg
 ```
-View the `Image_Upload.gif` image below for a tutorial on the image uploading and viewing process: 
+Or at a port of your choosing. View the `Image_Upload.gif` image below for a tutorial on the image uploading and viewing process: 
 
 ![Image Upload](Image_Upload.gif)
